@@ -1,0 +1,18 @@
+needs_sort = [17, 5, 1, 7, 9, 12, 6, 4, 2, 19]
+sorted_=[]
+
+for i in range(len(needs_sort)):
+    if i==0:
+        sorted_.insert(i, needs_sort[i])
+    else:
+        for j in range(len(sorted_)):
+            print(sorted_)
+            if (needs_sort[i]>sorted_[j] and j!=(len(sorted_)-1)):
+                continue
+            elif((needs_sort[i]>sorted_[j]) and j==(len(sorted_)-1)):
+                sorted_.insert(len(sorted_) , needs_sort[i])
+            else:
+                sorted_.insert(j, needs_sort[i])
+                break
+                
+print (sorted_)
